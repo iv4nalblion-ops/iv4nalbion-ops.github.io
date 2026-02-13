@@ -227,6 +227,24 @@
             justify-content: center;
             font-size: 60px;
             color: var(--navy);
+            overflow: hidden; /* Ensure child elements are clipped to the circle */
+        }
+
+        /* Make img-Portfolio inside profile-img circular */
+        .profile-img .img-Portfolio {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1; /* Square aspect ratio */
+            border-radius: 50%; /* Make it circular */
+            overflow: hidden; /* Clip the image to the circle */
+            background: #f8f9fa;
+        }
+
+        /* Ensure the image fills the circular container properly */
+        .profile-img .img-Portfolio img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the circle without distortion */
         }
 
         .img-Portfolio {
