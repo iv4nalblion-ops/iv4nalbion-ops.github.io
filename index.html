@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
     <link rel="stylesheet" href="style.css">
-   
+    <!-- Bootstrap Icons (solo iconos, sin Bootstrap) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-     <header>
-            <h1 id="name">Name</h1>
-            <p class="tagline">UX Engineer | Ex-Technical Artist (Fortnite)</p>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <header>
+            <h1 id="name">Ivan Bonilla</h1>
+            <p class="tagline">UX Engineer</p>
+            <a href="#about-me" class="scroll-down" aria-label="Bajar a About Me">
+                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </a>
         </header>
         
-    <div class="container" style="background-color: rgb(36, 54, 105); height: 1000px;">
-       
-        <section class="section">
+    <main id="main">
+    <div class="container container-hero" id="about-me">
+        <section class="section" aria-labelledby="about-heading">
              <div class="profile-img">
-                <i class="fas fa-user"></i>
+                <i class="bi bi-person" aria-hidden="true"></i>
             </div>
-            <h2 style="color: white;">  <i class="fas fa-user"></i> About Me</h2>
-            <p style="color: white; font-size: 2dvh;" id="about-text">
-                From AAA Gaming to <span style="color: aqua;"> UX Engineering </span>
+            <h2 id="about-heading" class="hero-title"><i class="bi bi-person" aria-hidden="true"></i> About Me</h2>
+            <p class="hero-text" id="about-text">
+                From AAA Gaming to <span class="about-highlight"> UX Engineering </span>
                 With 3 years in 3D art and technical 
                 roles for Epic Games (Fortnite), 
                 I apply systems thinking, performance optimization, and scalable architecture principles to UX and 
@@ -36,32 +41,29 @@
         </div>
 
         <div class="container">
-
-            <section class="section">
-                <div>
-                    <h1>projects</h1>
-                </div>
-                <div>
-                    <h1>Vehicle Customization Platform</h1>
-                </div>
-
+            <section class="section section-projects-intro" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <p class="projects-teaser">Descubre mis casos de estudio y proyectos recientes.</p>
+                <a href="#projects-list" class="scroll-down-cta">
+                    <span class="scroll-down-cta__text">Scroll down</span>
+                    <i class="bi bi-chevron-double-down" aria-hidden="true"></i>
+                </a>
             </section>
             
-            <section class="section">
-            
-
+            <section id="projects-list" class="section projects-reveal" aria-labelledby="projects-list-heading">
+                <h2 id="projects-list-heading" class="visually-hidden">Listado de proyectos</h2>
                      <!-- Contenedor principal del proyecto -->
     <div class="project-card">
         
         <!-- IMAGEN - Puro visual, con hover sutil -->
         <div class="img-Portfolio">
             <img src="./resources/Screenshot 2026-02-12 160620.png" alt="Fortnite UX Project">
-            <i class="fas fa-user project-icon"></i>
+            <i class="bi bi-person project-icon"></i>
             
             <!-- Hover overlay - Solo aparece al pasar -->
             <div class="project-hover">
                 <span class="view-project">
-                    <i class="fas fa-arrow-right"></i> Ver caso
+                    <i class="bi bi-arrow-right"></i> Ver caso
                 </span>
             </div>
         </div>
@@ -91,10 +93,10 @@
             
             <div class="project-actions">
                 <a href="#" class="btn-case">
-                    Ver presentación <i class="fas fa-arrow-right"></i>
+                    Ver presentación <i class="bi bi-arrow-right"></i>
                 </a>
                 <a href="#" class="btn-canva">
-                    <i class="fab fa-canva"></i> Canva
+                    <i class="bi bi-palette"></i> Canva
                 </a>
             </div>
         </div>
@@ -103,34 +105,15 @@
                
                
              </section>
-
-             <section class="section">
-            
-
-                    <p>
-                        Role: Sole UX Designer + Frontend Contributor
-                    </p>
-                    <p>
-                        Problem: 68% abandonment during 3D customization
-                    </p>
-                     <p>
-                       Solution: UX redesign + technical optimization
-                    </p>
-               
-               
-             </section>
-
         </div>
-        
-
             <div class="container">
 
             
         
         <section class="section">
-            <h2><i class="fas fa-code"></i> Abilities</h2>
+            <h2><i class="bi bi-code-slash"></i> Abilities</h2>
             <div class="skills-grid">
-                <div class="skill-item">UX/UI Desig</div>
+                <div class="skill-item">UX/UI Design</div>
                 <div class="skill-item">Figma</div>
                 <div class="skill-item">CSS3</div>
                 <div class="skill-item">JavaScript</div>
@@ -141,30 +124,30 @@
         </section>
         
         <section class="section">
-            <h2><i class="fas fa-envelope"></i> Contact me</h2>
+            <h2><i class="bi bi-envelope"></i> Contact me</h2>
             <p>Ready to Build Together?</p>
             
             <div class="contact-links">
                 <a href="mailto:tuemail@ejemplo.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Email
+                    <i class="bi bi-envelope"></i> Email
                 </a>
                 <a href="https://linkedin.com" target="_blank" class="contact-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
+                    <i class="bi bi-linkedin"></i> LinkedIn
                 </a>
                 <a href="tu-cv.pdf" class="contact-btn">
-                    <i class="fas fa-file-pdf"></i> Ver CV
+                    <i class="bi bi-file-earmark-pdf"></i> Ver CV
                 </a>
             </div>
             
             <div class="social-icons">
                 <a href="https://github.com" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
+                    <i class="bi bi-github"></i>
                 </a>
                 <a href="https://twitter.com" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
+                    <i class="bi bi-twitter-x"></i>
                 </a>
                 <a href="https://instagram.com" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
+                    <i class="bi bi-instagram"></i>
                 </a>
             </div>
         </section>
@@ -173,7 +156,7 @@
             <p>© <span id="current-year">2024</span> - Made with ❤️ & GitHub Pages</p>
         </footer>
     </div>
-    
+    </main>
 </body>
 <script src="script.js"></script>
 </html>

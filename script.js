@@ -33,13 +33,30 @@
         // Efecto scroll suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const targetId = this.getAttribute('href');
-                if(targetId !== '#') {
-                    document.querySelector(targetId)?.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                if (targetId && targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
             });
         });
+
+        // Revelar proyectos cuando el usuario hace scroll hasta esa sección (UX: contenido que se revela al bajar)
+        const projectsList = document.getElementById('projects-list');
+        if (projectsList) {
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                        }
+                    });
+                },
+                { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+            );
+            observer.observe(projectsList);
+        }
    
