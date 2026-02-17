@@ -473,7 +473,7 @@
 }
 
 .view-project {
-    color: white;
+    color: white !important;
     font-weight: 600;
     padding: 12px 28px;
     border: 2px solid white;
@@ -492,8 +492,9 @@
 
 .view-project:hover {
     background: white;
-    color: var(--navy);
+    color: var(--navy) !important;
     cursor: pointer;
+     
 }
 
 /* ===== INFORMACIÓN FUERA DE LA IMAGEN ===== */
@@ -648,7 +649,7 @@
         padding: 10px 20px;
         font-size: 0.9rem;
         background: white;
-        color: var(--navy);
+        color: var(--navy) !important;
         border: none;
     }
     
